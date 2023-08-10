@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--quaternary-color), transparent 90%);
+
+  h2 {
+    font-weight: 400;
+  }
+
+  ul {
+    display: flex;
+    gap: 3rem;
+
+    li {
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+
+      a {
+        color: var(--text-color);
+        transition: 300ms;
+        &:hover {
+          color: var(--tertiary-color);
+        }
+      }
+    }
+  }
+}
