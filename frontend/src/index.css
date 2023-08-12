@@ -9,8 +9,9 @@
   --primary-color: #f0ac1d;
   --secondary-color: #474747;
   --tertiary-color: #e5b245;
-  --quatenary-color: #D4D4D4;
+  --quaternary-color: #D4D4D4;
   --background-color: #2a2a2a;
+  --center-line: 40vw;
 
   color: var(--text-color);
   background-color: var(--background-color);
