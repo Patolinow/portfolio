@@ -1,0 +1,30 @@
+.home {
+  display: flex;
+  justify-content: center;
+  
+  article {
+    align-items: center;
+    display: flex;
+
+    
+     & > img:nth-of-type(1) {
+      margin-top: 5rem;
+      margin-right: 1rem;
+    }
+
+    .buttons {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1.5rem;
+
+      button:nth-child(2) {
+        display: flex;
+        gap: 10px;        
+      }
+    }
+  }
+
+  & > img {
+    translate: 10% 20%;
+  }
+}
