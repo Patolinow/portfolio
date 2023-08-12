@@ -4,10 +4,11 @@
   font-size: inherit;
   color: inherit;
   font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.201);
   padding: 0.75rem 2rem;
   border-radius: 1.5rem;
 }
 
 .secondary {
-  background-color: var(--secondary-color);
+  background-color: color-mix(in srgb, var(--secondary-color), 25% transparent);
 }
