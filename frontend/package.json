@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest",
-    "vitest-ui": "vitest --ui",
+    "test-ui": "vitest --ui",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
