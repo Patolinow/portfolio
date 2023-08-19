@@ -1,3 +1,35 @@
 .about-me {
-  padding: 12rem;
+  position: relative;
+  justify-content: center;
+  gap: 5rem;
+  display: flex;
+
+  article {
+    max-width: 24.6rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--text-color), transparent 25%);
+      line-height: 1.75;
+      font-size: 1.125rem;
+    }
+  }
+
+  #musical-note, #light-bulb {
+    position: absolute;
+    z-index: -1;
+  }
+
+  #musical-note {
+    right: 36%;
+    top: -10%;
+  }
+
+  #light-bulb {
+    right: 0;
+    top: 80%;
+  }
 }
+
