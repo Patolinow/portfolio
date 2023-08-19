@@ -1,11 +1,10 @@
-#root {
-  background-image: url("./assets/images/background-line.png");
-  background-position: var(--center-line);
-  background-repeat: repeat-y;
-}
-
 h1 {
   font-size: 6rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 4rem;
   line-height: 1;
 }
 
