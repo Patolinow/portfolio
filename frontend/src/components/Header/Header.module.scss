@@ -21,7 +21,7 @@
 
       a {
         color: var(--text-color);
-        transition: 300ms;
+        transition: var(--default-transition-time);
         &:hover {
           color: var(--tertiary-color);
         }

@@ -11,7 +11,8 @@
   --tertiary-color: #e5b245;
   --quaternary-color: #D4D4D4;
   --background-color: #2a2a2a;
-  --center-line: 40vw;
+  --center-line: 30%;
+  --default-transition-time: 0.3s;
 
   color: var(--text-color);
   background-color: var(--background-color);
