@@ -1,12 +1,18 @@
 .button {
-  background-color: var(--primary-color);
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   font-weight: bold;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.201);
+  cursor: pointer;
+  background-color: var(--primary-color);
   padding: 0.75rem 2rem;
   border-radius: 1.5rem;
+  transition-duration: var(--default-transition-time);
+
+  &:hover {
+    filter: brightness(110%);
+  }
 }
 
 .secondary {
