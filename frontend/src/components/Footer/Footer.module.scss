@@ -1,0 +1,42 @@
+.footer {
+  border-top: 1px solid color-mix(in srgb, var(--text-color), transparent 90%);
+  padding: 4rem 0;
+
+  ul {
+    justify-content: center;
+    display: flex;
+    gap: 3rem;
+
+    li > img {
+      width: 1.5rem;
+    }
+
+    &:first-child {
+      margin-bottom: 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
+    &:last-child {
+      li {
+        height: 3rem;
+        aspect-ratio: 1/1;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: var(--secondary-color);
+      }
+
+      li:hover {
+        background-color: var(--secondary-color);
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

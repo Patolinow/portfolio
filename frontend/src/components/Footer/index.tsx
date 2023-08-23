@@ -1,7 +1,4 @@
-import styles from "./Footer.module.scss"
-import Lottie from "lottie-react"
-import githubAnimation from "../../assets/icons/github.json"
-import linkedinAnimation from "../../assets/icons/linkedin.json"
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
 
