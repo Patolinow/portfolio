@@ -1,4 +1,9 @@
 import styles from "./Footer.module.scss";
+import homeIcon from "../../assets/icons/home.svg";
+import aboutMeIcon from "../../assets/icons/about-me.svg";
+import projectsIcon from "../../assets/icons/projects.svg";
+import contactIcon from "../../assets/icons/contact.svg";
+
 
 const Footer = () => {
 
@@ -7,17 +12,32 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre mim</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-      <ul>
         <a href="#">
-          <li><Lottie animationData={githubAnimation}/></li>
+          <li>
+            <img src={homeIcon} /> <p>Home</p>
+          </li>
         </a>
+
         <a href="#">
-          <li><Lottie animationData={linkedinAnimation}/></li>
+          <li>
+            <img src={aboutMeIcon} /> <p>Sobre mim</p>
+          </li>
+        </a>
+
+        <a href="#">
+          <li>
+            <img src={projectsIcon} />
+            <p>Skills & Projetos</p>
+          </li>
+        </a>
+
+        <a href="#">
+          <li>
+            <img src={contactIcon} />
+            <p>Contato</p>
+          </li>
+        </a>
+      </ul>
         </a>
       </ul>
     </footer>
