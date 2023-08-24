@@ -8,6 +8,10 @@ h2 {
   line-height: 1;
 }
 
+a {
+  color: var(--text-color);
+}
+
 .accent-text {
   color: var(--primary-color);
 }
