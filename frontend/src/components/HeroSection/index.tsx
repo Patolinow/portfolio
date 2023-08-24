@@ -3,10 +3,20 @@ import downloadImage from "../../assets/icons/download.svg";
 import arrowImage from "../../assets/images/arrow1.svg";
 import styles from "./HeroSection.module.scss";
 import Button from "../Ui/Button";
-
-// 
+import { Player } from "@lottiefiles/react-lottie-player";
+import { AnimationItem } from "lottie-web";
+import { useEffect, useRef } from "react";
+import downArrow from "../../assets/images/downArrow.json";
 
 const HeroSection = () => {
+  const arrowRef = useRef() as React.MutableRefObject<AnimationItem>;
+
+useEffect(() => {
+  setTimeout(() => {
+    arrowRef.current.play();
+  }, 1500);
+}, []);
+
   return (
     <section className={styles.home}>
       <article>
@@ -18,15 +28,24 @@ const HeroSection = () => {
 
           <div className={styles.buttons}>
             <Button>Contratar</Button>
-            <Button className="secondary"><p>Baixar CV</p> <img src={downloadImage}/></Button>
+
+            <Button className="secondary">
+              <p>Baixar CV</p> <img src={downloadImage} />
+            </Button>
           </div>
         </div>
-        
 
+        <img src={heroImage} alt="Homem sentado no chão usando um notebook apoiado em seu joelho" />
       </article>
 
-      <img src={heroImage} alt="Imagem de um homem sentado no chão usando um notebook" />
-
+      <Player
+        id={styles["down-arrow"]}
+        src={downArrow}
+        keepLastFrame
+        lottieRef={(lottieRef) => {
+          arrowRef.current = lottieRef;
+        }}
+      />
     </section>
   );
 };
