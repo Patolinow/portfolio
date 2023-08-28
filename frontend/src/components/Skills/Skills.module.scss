@@ -1,0 +1,23 @@
+#skills {
+  width: fit-content;
+
+  li {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: end;
+
+    img {
+      height: 110px;
+    }
+    
+    p {
+      text-transform: capitalize;
+      color: var(--tertiary-color);
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
