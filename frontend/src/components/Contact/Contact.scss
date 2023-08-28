@@ -1,0 +1,60 @@
+#contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+
+  form {
+    width: 600px;
+
+    fieldset {
+      display: flex;
+      gap: 1.5rem
+      
+      
+    }
+
+    textarea, input {
+      color: var(--text-color);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: color-mix(in srgb, var(--secondary-color) , transparent 50%);
+      border-radius: 1rem;
+
+      padding: .5rem 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        transition-duration: var(--default-transition-time);
+        width: 1.25rem;
+      }
+    }
+
+    button:hover {
+      img {
+        rotate: -15deg;
+        transform: translate(0.5rem, 0);
+      }
+    }
+  }
+
+  #keyboard,
+  #mail {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
