@@ -1,0 +1,30 @@
+#projects {
+  > li {
+    // width: fit-content;
+    height: 450px;
+  }
+
+  img {
+    height: 75%;
+    border-radius: 1rem;
+  }
+
+  ul {
+    color: color-mix(in srgb, var(--tertiary-color), transparent 25%);
+
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+
+    margin-top: 0.5rem;
+  }
+
+  menu {
+    margin-top: 1rem;
+    text-align: center;
+
+    button:first-child {
+      margin-right: 1rem;
+    }
+  }
+}
