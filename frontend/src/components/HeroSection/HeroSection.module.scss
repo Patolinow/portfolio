@@ -1,9 +1,9 @@
 .home {
-  display: flex;
-  justify-content: center;
+  position: relative;
   
   article {
     align-items: center;
+    justify-content: center;
     display: flex;
 
     
@@ -22,9 +22,17 @@
         gap: 10px;        
       }
     }
+
+    & > img:nth-of-type(2) {
+      translate: 10% 20%;
+    }
   }
 
-  & > img {
-    translate: 10% 20%;
+  #down-arrow {
+    z-index: -1;
+    height: 30rem;
+    position: absolute;
+    translate: 0 -50%;
+    left: var(--center-line);
   }
 }

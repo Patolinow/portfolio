@@ -10,12 +10,11 @@ import downArrow from "../../assets/images/downArrow.json";
 
 const HeroSection = () => {
   const arrowRef = useRef() as React.MutableRefObject<AnimationItem>;
-
-useEffect(() => {
-  setTimeout(() => {
-    arrowRef.current.play();
-  }, 1500);
-}, []);
+  useEffect(() => {
+    setTimeout(() => {
+      arrowRef.current.play();
+    }, 1500);
+  }, []);
 
   return (
     <section className={styles.home}>
@@ -26,13 +25,13 @@ useEffect(() => {
           <h1>FRONTEND</h1>
           <h1 className="accent-text">DEVELOPER</h1>
 
-          <div className={styles.buttons}>
+          <menu className={styles.buttons}>
             <Button>Contratar</Button>
 
             <Button className="secondary">
               <p>Baixar CV</p> <img src={downloadImage} />
             </Button>
-          </div>
+          </menu>
         </div>
 
         <img src={heroImage} alt="Homem sentado no chão usando um notebook apoiado em seu joelho" />
