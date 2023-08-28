@@ -18,3 +18,7 @@
 .secondary {
   background-color: color-mix(in srgb, var(--secondary-color), 25% transparent);
 }
+
+.tertiary {
+  background-color: var(--background-color);
+}
