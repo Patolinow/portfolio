@@ -7,9 +7,7 @@ import aboutMeIcon from "../../assets/icons/about-me.svg";
 import projectsIcon from "../../assets/icons/projects.svg";
 import contactIcon from "../../assets/icons/contact.svg";
 
-
 const Footer = () => {
-  
   return (
     <footer className={styles.footer}>
       <ul>
@@ -43,13 +41,13 @@ const Footer = () => {
       <ul>
         <a href="https://github.com/Patolinow" target="_blank">
           <li>
-            <Player src={githubAnimation} hover />
+            <Player src={githubAnimation} hover style={{padding: "4px", paddingTop: "8px"}}/>
           </li>
         </a>
 
         <a href="https://www.linkedin.com/in/fabio--neves/" target="_blank">
           <li>
-            <Player src={linkedinAnimation} hover />
+            <Player src={linkedinAnimation} hover style={{padding: "6px"}}/>
           </li>
         </a>
       </ul>
