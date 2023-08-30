@@ -1,12 +1,12 @@
+import { useEffect, useRef } from "react";
 import heroImage from "../../assets/images/drawn1.png";
-import downloadImage from "../../assets/icons/download.svg";
 import arrowImage from "../../assets/images/arrow1.svg";
-import styles from "./HeroSection.module.scss";
-import Button from "../Ui/Button";
+import downArrow from "../../assets/images/downArrow.json";
+import downloadIcon from "../../assets/icons/download.svg";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { AnimationItem } from "lottie-web";
-import { useEffect, useRef } from "react";
-import downArrow from "../../assets/images/downArrow.json";
+import Button from "../Ui/Button";
+import "./HeroSection.scss"
 
 const HeroSection = () => {
   const arrowRef = useRef() as React.MutableRefObject<AnimationItem>;
@@ -17,7 +17,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className={styles.home}>
+    <section id="home">
       <article>
         <img src={arrowImage} alt="Seta apontando para botão 'contratar'" />
 
@@ -25,11 +25,11 @@ const HeroSection = () => {
           <h1>FRONTEND</h1>
           <h1 className="accent-text">DEVELOPER</h1>
 
-          <menu className={styles.buttons}>
+          <menu className="buttons">
             <Button>Contratar</Button>
 
             <Button className="secondary">
-              <p>Baixar CV</p> <img src={downloadImage} />
+              <p>Baixar CV</p> <img src={downloadIcon} />
             </Button>
           </menu>
         </div>
@@ -38,7 +38,7 @@ const HeroSection = () => {
       </article>
 
       <Player
-        id={styles["down-arrow"]}
+        id="down-arrow"
         src={downArrow}
         keepLastFrame
         lottieRef={(lottieRef) => {
