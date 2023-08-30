@@ -1,11 +1,12 @@
-.home {
+#home {
   position: relative;
+  max-width: var(--max-screen-width);
+  margin: 0 auto;
   
   article {
     align-items: center;
     justify-content: center;
     display: flex;
-
     
      & > img:nth-of-type(1) {
       margin-top: 5rem;
