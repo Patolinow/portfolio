@@ -13,12 +13,12 @@
       margin-right: 1rem;
     }
 
-    .buttons {
+    menu.buttons {
       margin-top: 3rem;
       display: flex;
       gap: 1.5rem;
 
-      button:nth-child(2) {
+      button {
         display: flex;
         gap: 10px;        
       }
