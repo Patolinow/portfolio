@@ -37,7 +37,7 @@ const Skills = () => {
   return (
     <ul id={styles.skills}>
       {languagesArray.map((language) => (
-        <ListItemCard>
+        <ListItemCard key={language.name}>
           <img src={language.image} alt={language.name} />
           <p>{language.isUpperCase ? language.name.toUpperCase() : language.name}</p>
         </ListItemCard>
