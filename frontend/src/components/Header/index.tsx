@@ -3,14 +3,22 @@ import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <h2>Logo</h2>
+      <h3>TempLogo</h3>
 
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre mim</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about-me">Sobre mim</a>
+          </li>
+          <li>
+            <a href="#skills-and-projects">Skills & Projetos</a>
+          </li>
+          <li>
+            <a href="#contact">Contato</a>
+          </li>
         </ul>
       </nav>
     </header>

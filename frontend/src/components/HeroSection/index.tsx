@@ -3,6 +3,7 @@ import heroImage from "../../assets/images/drawn1.png";
 import arrowImage from "../../assets/images/arrow1.svg";
 import downArrow from "../../assets/images/downArrow.json";
 import downloadIcon from "../../assets/icons/download.svg";
+import currriculumPdf from "../../assets/pdfs/fabio-neves-frontend.pdf";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { AnimationItem } from "lottie-web";
 import Button from "../Ui/Button";
@@ -26,11 +27,13 @@ const HeroSection = () => {
           <h1 className="accent-text">DEVELOPER</h1>
 
           <menu className="buttons">
-            <Button>Contratar</Button>
+            <a href="#contact"><Button>Contratar</Button></a>
 
-            <Button className="secondary">
-              <p>Baixar CV</p> <img src={downloadIcon} />
-            </Button>
+            <a href={currriculumPdf} download={currriculumPdf}>
+              <Button className="secondary">
+                <p>Baixar CV</p> <img src={downloadIcon} />
+              </Button>
+            </a>
           </menu>
         </div>
 

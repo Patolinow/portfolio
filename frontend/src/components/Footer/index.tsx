@@ -17,20 +17,20 @@ const Footer = () => {
           </li>
         </a>
 
-        <a href="#">
+        <a href="#about-me">
           <li>
             <img src={aboutMeIcon} /> <p>Sobre mim</p>
           </li>
         </a>
 
-        <a href="#">
+        <a href="#skills-and-projects">
           <li>
             <img src={projectsIcon} />
             <p>Skills & Projetos</p>
           </li>
         </a>
 
-        <a href="#">
+        <a href="#contact">
           <li>
             <img src={contactIcon} />
             <p>Contato</p>
