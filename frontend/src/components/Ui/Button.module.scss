@@ -13,6 +13,10 @@
   &:hover {
     filter: brightness(110%);
   }
+
+  &.tertiary:hover {
+    filter: brightness(90%);
+  }
 }
 
 .secondary {
