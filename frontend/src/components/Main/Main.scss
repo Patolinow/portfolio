@@ -2,8 +2,8 @@ main {
   margin: 0 auto;
   
 
-  section {
-    margin-bottom: 20rem;
+  section:not(:first-child, #skills-and-projects) {
+    margin-top: 20rem;
   }
 }
 
