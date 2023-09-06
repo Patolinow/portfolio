@@ -1,46 +1,76 @@
 #skills-and-projects {
+  margin-top: 20rem;
   padding: 16rem 0;
-  background-image: linear-gradient(var(--background-color) 0%, transparent 20%, transparent 80%, var(--background-color) 100%), url("../../assets/images/doodles-background.svg");
+  background-image: linear-gradient(
+      var(--background-color) 0%,
+      transparent 20%,
+      transparent 80%,
+      var(--background-color) 100%
+    ),
+    url("../../assets/images/doodles-background.svg");
 
   article {
     max-width: 72rem;
     margin: auto;
 
-    // -webkit-overflow-scrolling: touch;
-
     h2 {
       margin-bottom: 3rem;
     }
 
-
-    
+    .bg-container {
+      position: relative;
+    }
 
     .ul-wrapper {
-      position: relative;
-      overflow-x: scroll;
+      max-width: var(--max-screen-width);
+      -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
       scroll-snap-type: x mandatory;
-      scroll-snap-align: center;
-      // -ms-overflow-style: none;
-      // scrollbar-width: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      cursor: grab;
+      user-select: none;
 
-      ul {
-        cursor: grab;
-        user-select: none;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+
+      &.is-snapping-desactivated {
+        scroll-snap-type: none;
+      }
+
+      > ul {
         display: flex;
         gap: 3rem;
+        padding: 0 1.5rem;
       }
     }
 
-    // .ul-wrapper::before {
-    //   position: fixed;
-    //   content: "";
-    //   display: block;
-    //   width: 100%;
-    //   height: 100%;
-    //   background: linear-gradient(90deg, var(--background-color) 0%, rgba(9,9,121,0) 5%, rgba(1,185,237,0) 95%, var(--background-color) 100%); 
-    //   background-color: red;
-    //   z-index: 2;
-    // }
+    .ul-wrapper::after,
+    .ul-wrapper::before {
+      position: absolute;
+      content: "";
+
+      width: 5%;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+    }
+
+    .ul-wrapper::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--background-color) 0%, transparent 100%);
+    }
+
+    .ul-wrapper::after {
+      right: 0;
+      background: linear-gradient(90deg, transparent 0%, var(--background-color) 100%);
+    }
   }
 
   article:first-child {
