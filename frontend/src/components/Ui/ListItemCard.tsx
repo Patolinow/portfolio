@@ -1,8 +1,9 @@
-import { PropsWithChildren } from "react";
+import { forwardRef, PropsWithChildren, ComponentPropsWithoutRef } from "react";
 import styles from "./ListItemCard.module.scss";
 
-const ListItemCard = (props: PropsWithChildren<JSX.IntrinsicElements["li"]>) => {
-  return <li className={`${styles.Card} ${props.className ?? ""}`}>{props.children}</li>;
-};
+type LiProps = ComponentPropsWithoutRef<'li'>
+const ListItemCard = forwardRef<HTMLLIElement | null, PropsWithChildren<LiProps>>((props, ref) => {
+  return <li ref={ref} className={`${styles.Card} ${props.className ?? ""}`} onMouseDown={props.onMouseDown}>{props.children}</li>;
+});
 
 export default ListItemCard;
