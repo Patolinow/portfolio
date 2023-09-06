@@ -1,7 +1,6 @@
 import "./SkillsAndProjects.scss";
 import Skills from "../Skills";
 import Projects from "../Projects";
-import { useRef } from "react";
 
 const SkillsAndProjects = () => {
   return (
@@ -11,9 +10,11 @@ const SkillsAndProjects = () => {
           Minhas <span className="accent-text">Skills</span>
         </h2>
 
-        <div className="ul-wrapper">
-          <Skills />
-        </div>
+
+          <div className="bg-container">
+            <Skills />
+          </div>
+        
       </article>
 
       <article>
@@ -21,9 +22,11 @@ const SkillsAndProjects = () => {
           <span className="accent-text">Projetos</span> Recentes
         </h2>
 
-        <div className="ul-wrapper">
-          <Projects />
-        </div>
+        
+          <div className="bg-container">
+            <Projects />
+          </div>
+        
       </article>
     </section>
   );
