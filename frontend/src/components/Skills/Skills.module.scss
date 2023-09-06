@@ -1,5 +1,6 @@
 #skills {
   width: fit-content;
+  animation: slide 5s infinite alternate;
 
   li {
     min-width: 200px;
@@ -19,5 +20,14 @@
       margin-top: 0.5rem;
       font-size: 1.5rem;
     }
+  }
+}
+
+keyframes slide {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%  ;
   }
 }
