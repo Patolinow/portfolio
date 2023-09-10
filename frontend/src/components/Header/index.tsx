@@ -1,9 +1,10 @@
 import styles from "./Header.module.scss";
+import duckLogo from "../../assets/icons/fav-duck.svg";
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <h3>TempLogo</h3>
+      <img src={duckLogo} alt="duck" />
 
       <nav>
         <ul>
