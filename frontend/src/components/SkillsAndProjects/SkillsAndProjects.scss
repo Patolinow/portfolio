@@ -26,9 +26,10 @@
       -webkit-overflow-scrolling: touch;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
+      cursor: grab;
+
       -ms-overflow-style: none;
       scrollbar-width: none;
-      cursor: grab;
       user-select: none;
 
       &::-webkit-scrollbar {
@@ -47,7 +48,6 @@
       > ul {
         display: flex;
         gap: 3rem;
-        padding: 0 1.5rem;
       }
     }
 
