@@ -2,8 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 6rem;
+  padding: 1.5rem 6rem;
   border-bottom: 1px solid color-mix(in srgb, var(--quaternary-color), transparent 90%);
+
+  img {
+    height: 6rem;
+  }
 
   h2 {
     font-weight: 400;
