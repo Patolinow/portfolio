@@ -39,6 +39,22 @@
       &::placeholder {
         font-weight: bold;
       }
+
+      &:focus-within {
+        outline: none;
+      }
+
+      &:is(.invalid, .valid) {
+        outline: 2px solid transparent;
+      }
+
+      &.invalid {
+        outline-color: color-mix(in srgb, var(--error-color), transparent 60%);
+      }
+
+      &.valid {
+        outline-color: color-mix(in srgb, var(--success-color), transparent 80%);
+      }
     }
 
     textarea {
