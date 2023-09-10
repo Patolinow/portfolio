@@ -1,74 +1,65 @@
+import styles from "../components/Skills/Skills.module.scss";
 
-
-const useImageSlider = (containerRef:React.RefObject<HTMLDivElement>) => {
+const useImageSlider = (
+  containerRef: React.RefObject<HTMLDivElement>,
+  itemRef?: React.RefObject<HTMLUListElement>
+) => {
   //? item animation
   let isDragging = false;
   let startX: number;
   let scrollLeft: number;
   let activateSnapping: NodeJS.Timeout;
-  
-  const touchstartHandler = () => {
-    clearTimeout(activateSnapping);
-    containerRef.current?.classList.remove('is-snapping-desactivated');
-    console.log('touch Started');
-  }
 
-  const mouseDownHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => { 
+  const mouseDownHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     clearTimeout(activateSnapping);
-    // !Arrumar os "!" do código
-  isDragging = true;
-  containerRef.current?.classList.add('is-snapping-desactivated');
-  startX = e.pageX - containerRef.current?.offsetLeft!;
-  scrollLeft = containerRef.current?.scrollLeft!;
-  console.log('mouse down');
-  }
+    isDragging = true;
+
+    if (containerRef.current) {
+      startX = e.pageX - containerRef.current.offsetLeft;
+      scrollLeft = containerRef.current.scrollLeft;
+    }
+
+    itemRef?.current?.classList.remove(styles["not-touched"]);
+  };
 
   const mouseLeaveHandler = () => {
     isDragging = false;
-  containerRef.current?.classList.remove('is-snapping-desactivated');
-  console.log('mouse leave');
-  }
+  };
 
   const mouseMoveHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const formula = 5000 / containerRef.current?.scrollWidth!
-    if(!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current?.offsetLeft!;
-    const walk = (x - startX) * (formula);
-    containerRef.current?.scrollTo({
-      left: scrollLeft - walk
-    })
+    if (!isDragging) return;
 
-    console.log(formula);
-  }
+    if (containerRef.current) {
+      const dragSpeed = 5000 / containerRef.current.scrollWidth;
+      const xPageCoordinate = e.pageX - containerRef.current.offsetLeft;
+      const walk = (xPageCoordinate - startX) * dragSpeed;
+      containerRef.current?.scrollTo({
+        left: scrollLeft - walk,
+        behavior: "smooth",
+      });
+
+      // console.log(`walk: ${walk}, xPageCoordinate: ${xPageCoordinate}, startX: ${startX}`)
+    }
+  };
 
   const mouseUpHandler = () => {
     isDragging = false;
-  const oldScrollLeft = containerRef.current?.scrollLeft;
-  containerRef.current?.classList.remove('is-snapping-desactivated');
-  
-  const newScrollLeft = containerRef.current?.scrollLeft;
-  containerRef.current?.classList.add('is-snapping-desactivated');
-  containerRef.current!.scrollLeft = (oldScrollLeft ?? 0);
-  containerRef.current?.scrollTo({
-    left: newScrollLeft,
-    behavior: 'smooth'
-  });
-  activateSnapping = setTimeout(() => {
-    containerRef.current?.classList.remove('is-snapping-desactivated');
-  }, 500);
+    // containerRef.current?.scrollTo({
+    //   left: containerRef.current?.scrollLeft,
+    //   behavior: "smooth",
+    // });
 
-  console.log('mouse up');
-  }
-  
+    activateSnapping = setTimeout(() => {
+      containerRef.current?.classList.remove('is-snapping-desactivated');
+    }, 500);
+  };
 
   return {
-    touchstartHandler,
     mouseDownHandler,
     mouseLeaveHandler,
     mouseMoveHandler,
     mouseUpHandler,
-  }
-}
+  };
+};
 
 export default useImageSlider;

@@ -38,19 +38,19 @@ const Skills = () => {
 
   //? item animation
   const containerRef = useRef<HTMLDivElement>(null);
-  const slider = useImageSlider(containerRef);
+  const itemRef = useRef<HTMLUListElement>(null);
+  const slider = useImageSlider(containerRef, itemRef);
 
   return (
     <div
       className="ul-wrapper"
       ref={containerRef}
-      onTouchStart={slider.touchstartHandler}
       onMouseDown={slider.mouseDownHandler}
       onMouseLeave={slider.mouseLeaveHandler}
       onMouseMove={slider.mouseMoveHandler}
       onMouseUp={slider.mouseUpHandler}
     >
-      <ul id={styles.skills}>
+      <ul id={styles.skills} className={styles["not-touched"]} ref={itemRef}>
         {languagesArray.map((language) => (
           <ListItemCard key={language.name}>
             <img draggable="false" src={language.image} alt={language.name} />
