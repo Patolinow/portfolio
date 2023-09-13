@@ -7,8 +7,8 @@ interface InputValidatorProps {
 
 const useInputValidator = ({setInput, errorCondition}:InputValidatorProps) => {
   const [inputIsTouched, setInputIsTouched] = useState(false);
-  const isInvalid = !(!errorCondition && inputIsTouched);
-  const borderColor = isInvalid ? "" : "invalid";
+  const isInvalid = !errorCondition && inputIsTouched;
+  const borderColor = isInvalid ? "invalid" : "";
 
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setInput(() => e.target.value);

@@ -32,12 +32,12 @@ const Contact = () => {
     setInput: setMessageInput,
   });
 
-  const formIsInvalid = name.isInvalid && email.isInvalid && message.isInvalid;
+  const formIsValid = nameErrorCondition && emailErrorCondition && messageErrorCondition;
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formIsInvalid) return;
+    if (!formIsValid) return;
 
     send(
       "port_mail_service",
@@ -45,8 +45,7 @@ const Contact = () => {
       { user_name: nameInput, user_email: emailInput, message: messageInput },
       "w8Uj9kvQdVnLY9UR6"
     )
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
+      .then(() => {
         setIsSucess(true);
       })
       .catch(() => {
