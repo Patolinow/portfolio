@@ -11,10 +11,9 @@
   --tertiary-color: #e5b245;
   --quaternary-color: #D4D4D4;
   --background-color: #2a2a2a;
-  --error-color:#ce0d0d;
-  --success-color:#84ce0d;
+  --success-color:#23A67A;
+  --error-color:#FC5B5B;
   --max-screen-width: 72rem;
-  --center-line: 30%;
   --default-transition-time: 0.3s;
 
   color: var(--text-color);
@@ -39,6 +38,9 @@
 
 body {
   min-width: 320px;
+  min-height: 100dvh;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::after,
