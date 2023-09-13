@@ -1,0 +1,40 @@
+#contact-modal {
+  background-color: var(--secondary-color);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  max-width: 320px;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  z-index: 5;
+  top: -5rem;
+  left: 50vw;
+  transform: translateX(-50%);
+  animation: showing-up 4s ease-in-out;
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  img {
+   height: 1.2rem;
+  }
+}
+
+@keyframes showing-up {
+  0%, 100% {
+    top: -5rem;
+    opacity: 0;
+  }
+
+  10%, 90% {
+    opacity: 0.5;
+  }
+
+  20%, 80% {
+    top: 1rem;
+    opacity: 1;
+  }
+}
