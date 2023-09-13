@@ -45,6 +45,7 @@ const Skills = () => {
     <div
       className="ul-wrapper"
       ref={containerRef}
+      onTouchStart={slider.touchStartHandler}
       onMouseDown={slider.mouseDownHandler}
       onMouseLeave={slider.mouseLeaveHandler}
       onMouseMove={slider.mouseMoveHandler}

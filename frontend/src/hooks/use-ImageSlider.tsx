@@ -10,6 +10,10 @@ const useImageSlider = (
   let scrollLeft: number;
   let activateSnapping: NodeJS.Timeout;
 
+  const  touchStartHandler = () => { 
+    itemRef?.current?.classList.remove(styles["not-touched"]);
+  }
+
   const mouseDownHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     clearTimeout(activateSnapping);
     isDragging = true;
@@ -37,17 +41,11 @@ const useImageSlider = (
         left: scrollLeft - walk,
         behavior: "smooth",
       });
-
-      // console.log(`walk: ${walk}, xPageCoordinate: ${xPageCoordinate}, startX: ${startX}`)
     }
   };
 
   const mouseUpHandler = () => {
     isDragging = false;
-    // containerRef.current?.scrollTo({
-    //   left: containerRef.current?.scrollLeft,
-    //   behavior: "smooth",
-    // });
 
     activateSnapping = setTimeout(() => {
       containerRef.current?.classList.remove('is-snapping-desactivated');
@@ -55,6 +53,7 @@ const useImageSlider = (
   };
 
   return {
+    touchStartHandler,
     mouseDownHandler,
     mouseLeaveHandler,
     mouseMoveHandler,
