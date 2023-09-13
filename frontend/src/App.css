@@ -1,3 +1,25 @@
+html {
+  scrollbar-color: var(--primary-color) var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tertiary-color);
+}
+
 h1 {
   font-size: 6rem;
   line-height: 1;

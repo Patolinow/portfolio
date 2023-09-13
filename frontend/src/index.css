@@ -34,6 +34,7 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  -ms-overflow-style: none;
 }
 
 body {
