@@ -3,12 +3,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   max-width: 72rem;
-  scroll-margin-top: 16rem;
+  scroll-margin-top: 12rem;
   margin: 0 auto 20rem;
+  padding: 0 1rem;
+
+  article, form {
+    margin-top: 4rem;
+  }
+
+  article {
+    max-width: 42rem;   
+  }
 
   form {
-    width: 37.5rem;
+    width: 28rem;
 
     fieldset {
       display: flex;
@@ -95,4 +105,27 @@
     right: 2%;
     top: -12%;
   }
+}
+
+@media screen and (max-width: 1150px) {
+  #contact {
+  flex-wrap: wrap;
+  
+  article {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  form {
+    margin-top: 1rem;
+  }
+}
 }
