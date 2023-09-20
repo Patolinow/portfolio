@@ -1,11 +1,11 @@
 #projects {
   width: fit-content;
   > li {
-    height: 450px;
+    width: clamp(420px, 80vw ,560px);
   }
 
   img {
-    height: 75%;
+    width: 100%;
     border-radius: 1rem;
   }
 
@@ -16,15 +16,26 @@
     justify-content: center;
     gap: 0.75rem;
 
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   menu {
-    margin-top: 1rem;
     text-align: center;
+    width: 100%;
 
     button:first-child {
       margin-right: 1rem;
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    ul {
+      // display: none;
+      font-size: 0.95rem;
+    }
+  }
+  
 }
