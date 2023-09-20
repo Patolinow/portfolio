@@ -7,4 +7,12 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(2px);
 -webkit-backdrop-filter: blur(2px);
 border: 1px solid rgba(71, 71, 71, 0.17);
+line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .Card {
+    padding: 1rem;
+    padding-bottom: 0.8rem;
+  }
 }
