@@ -1,23 +1,22 @@
-
-
 #skills {
-  width: fit-content; 
-  
+  width: fit-content;
+
   &.not-touched {
-      animation: quick-swipe 5s infinite alternate ease-in;
+    animation: quick-swipe 5s infinite alternate ease-in;
   }
 
   li {
     min-width: 200px;
+    max-height: 207px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: end;
 
     img {
-      height: 110px;
+      height: calc(100% - 1.5rem);
     }
-    
+
     p {
       text-transform: capitalize;
       color: var(--tertiary-color);
@@ -29,13 +28,12 @@
 }
 
 @keyframes quick-swipe {
-  0%, 90% {
+  0%,
+  90% {
     transform: translateX(0);
+  }
 
- }
- 
- 100% {
-  transform: translateX(-5%);
- }
+  100% {
+    transform: translateX(-5%);
+  }
 }
-

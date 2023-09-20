@@ -12,9 +12,10 @@
   article {
     max-width: 72rem;
     margin: auto;
+    padding: 0 1rem;
 
     h2 {
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
     }
 
     .bg-container {
@@ -24,12 +25,10 @@
     .ul-wrapper {
       max-width: var(--max-screen-width);
       -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
       cursor: grab;
 
-      -ms-overflow-style: none;
-      scrollbar-width: none;
       user-select: none;
 
       &::-webkit-scrollbar {
