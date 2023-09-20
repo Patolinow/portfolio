@@ -9,7 +9,7 @@ import contactIcon from "../../assets/icons/contact.svg";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id={styles.footer}>
       <ul>
         <a href="#">
           <li>
