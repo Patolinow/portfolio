@@ -13,6 +13,7 @@
   --background-color: #2a2a2a;
   --success-color:#23A67A;
   --error-color:#FC5B5B;
+  --header-mobile-height: 4.5rem;
   --max-screen-width: 72rem;
   --default-transition-time: 0.3s;
 
@@ -36,9 +37,9 @@
   -ms-overflow-style: none;
 }
 
-body {
+html, body, #root {
   min-width: 320px;
-  min-height: 100dvh;
+  min-height: 100lvh;
 }
 
 @media (prefers-reduced-motion: reduce) {
