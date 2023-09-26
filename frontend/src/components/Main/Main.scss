@@ -1,9 +1,76 @@
 main {
   margin: 0 auto;
+  height: fit-content;
+
+  section:not(:first-child) {
+    margin-top: 30vh;
+  }
+
+  #musical-note, #light-bulb {
+    position: absolute;
+    z-index: -1;
+  }
+
+  #musical-note {
+    left: 30%;
+  }
+
+  #light-bulb {
+    right: 10%;
+  }
+
+  #return-top {
+    display: block;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    z-index: 10;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   
 
-  section:not(:first-child, #skills-and-projects) {
-    margin-top: 20rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+
+    transition: 150ms ease-in;
+
+    
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(110%);
+
+      img {
+        animation: go-top 1s ease-in-out;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main #return-top {
+    display: none;
+  }
+}
+
+@keyframes go-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
