@@ -53,9 +53,7 @@ const Contact = () => {
       })
       .finally(() => {
         setShowModal(true);
-        setTimeout(() => {
-          setShowModal(false);
-        }, 5000);
+        setTimeout(() => { setShowModal(false) }, 4001);
       });
 
     name.resetHandler();

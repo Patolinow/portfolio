@@ -5,16 +5,14 @@
   align-items: center;
 
   max-width: 72rem;
-  scroll-margin-top: 12rem;
-  margin: 0 auto 20rem;
+  // Clamp based on an monitor with 1000px of height and a phone with at least 640px of height
+  // the calc is percent-equivalent (26rem == 65% of 40rem)
+  scroll-margin-top: clamp(1rem, calc(65vh - 26rem), 14rem);
+  margin: 30vh auto;
   padding: 0 1rem;
 
-  article, form {
-    margin-top: 4rem;
-  }
-
   article {
-    max-width: 42rem;   
+    max-width: 42rem;
   }
 
   form {
@@ -103,29 +101,28 @@
 
   #mail {
     right: 2%;
-    top: -12%;
+    top: -17%;
   }
 }
 
 @media screen and (max-width: 1150px) {
   #contact {
-  flex-wrap: wrap;
-  
-  article {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    
-    h2 {
-      text-align: center;
+    flex-wrap: wrap;
+
+    article {
+      max-width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        display: none;
+      }
     }
 
-    img {
-      display: none;
+    form {
+      margin-top: 1rem;
     }
   }
-
-  form {
-    margin-top: 1rem;
-  }
-}
 }

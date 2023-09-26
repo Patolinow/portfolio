@@ -1,14 +1,25 @@
 #about-me {
   position: relative;
   display: flex;
-  gap: 5rem;
-  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: start;
+  gap: 2%;
+
   max-width: var(--max-screen-width);
-  margin: 0 auto;
-  scroll-margin-top: 12rem;
+  margin: 30vh auto 0;
+
+  // Clamp based on an monitor with 1000px of height and a phone with at least 820px of height
+  // The calc is percent-equivalent (46.125rem == 90% of 51.25rem)
+  scroll-margin-top: clamp(1rem, calc(90vh - 46.125rem), 12rem);
+
+  > img {
+    width: clamp(300px, 59%, 666px);
+    height: auto;
+  }
 
   article {
-    max-width: 24.6rem;
+    width: 39%;
     h2 {
       margin-bottom: 1rem;
     }
@@ -16,23 +27,36 @@
     p {
       color: color-mix(in srgb, var(--text-color), transparent 25%);
       line-height: 1.75;
-      font-size: 1.125rem;
+      font-size: clamp(1.15rem, calc(0.6rem + 1vw), 1.37rem);
+      text-align: start;
     }
-  }
 
-  #musical-note, #light-bulb {
-    position: absolute;
-    z-index: -1;
-  }
-
-  #musical-note {
-    right: 36%;
-    top: -10%;
-  }
-
-  #light-bulb {
-    right: 0;
-    top: 80%;
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 }
 
+@media screen and (max-width: 768px) {
+  #about-me {
+    flex-direction: column-reverse;
+    gap: 3rem;
+
+    article,
+    img {
+      max-width: 24rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    img {
+      text-align: center;
+      max-width: 28rem;
+    }
+
+    article > p,
+    article > h2 {
+      text-align: center;
+    }
+  }
+}
