@@ -13,8 +13,6 @@
     }
 
     &:first-child {
-      margin-bottom: 2rem;
-
       li {
         display: flex;
         align-items: center;
@@ -22,7 +20,8 @@
       }
     }
 
-    &:last-child {
+    &:last-of-type {
+      margin: 2rem 0;
       li {
         height: 3rem;
         aspect-ratio: 1/1;
@@ -34,9 +33,26 @@
         background-color: var(--secondary-color);
       }
     }
+  }
 
-    a:hover {
-      text-decoration: underline;
+  aside {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0.5rem;
+    gap: 1rem;
+    color: color-mix(in srgb, var(--quaternary-color), transparent 10%);
+    text-align: justify;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    aside {
+      font-size: 0.9rem;
     }
   }
 }

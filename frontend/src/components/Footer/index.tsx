@@ -51,6 +51,14 @@ const Footer = () => {
           </li>
         </a>
       </ul>
+
+      <aside>
+        <p>Icones do <a target="_blank" href="https://icons8.com/icon/4MhUS4CzoLbx/github">GitHub</a> e <a target="_blank" href="https://icons8.com/icon/wybRSjTxfYz3/linkedin-2">linkedin</a> pela <a target="_blank" href="https://icons8.com">Icons8</a>, modificadas por mim.</p>
+        
+         <p>
+         Logo de pato feita a partir do <a href="https://www.onlinewebfonts.com/icon">svg icon</a>, licenciada pela CC BY 4.0.
+         </p>
+      </aside>
     </footer>
   );
 };
