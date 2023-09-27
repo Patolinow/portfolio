@@ -1,39 +1,80 @@
 #home {
   position: relative;
   max-width: var(--max-screen-width);
-  margin: 0 auto;
-  
+  display: flex;
+  justify-content: center;
+  //! Arrumar o tamanho das coisas não fixas (vh, lvh, svh) para não ter shapeshifting no mobile
+  height: 90vh;
+  padding: 1rem 0.5rem;
+  margin: 10vh auto 0;
+
   article {
-    align-items: center;
-    justify-content: center;
     display: flex;
-    
-     & > img:nth-of-type(1) {
-      margin-top: 5rem;
-      margin-right: 1rem;
-    }
+    align-items: start;
+    justify-content: center;
 
-    menu.buttons {
-      margin-top: 3rem;
+    > div {
       display: flex;
-      gap: 1.5rem;
+      padding-top: 3rem;
 
-      button {
-        display: flex;
-        gap: 10px;        
+      > img {
+        translate: 0 2rem;
+        margin-right: 1rem;
       }
-    }
 
-    & > img:nth-of-type(2) {
-      translate: 10% 20%;
+      menu.buttons {
+        margin-top: 3rem;
+        display: flex;
+        gap: 1.5rem;
+
+        button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
     }
   }
 
+  > img {
+    width: 100%;
+    height: fit-content;
+  }
+
   #down-arrow {
-    z-index: -1;
-    height: 30rem;
     position: absolute;
-    translate: 0 -50%;
-    left: var(--center-line);
+    z-index: -1;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+
+    width: clamp(350px,calc(70vh - 150px)  ,500px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+    padding: 1rem 0rem;
+    margin-top: calc(10vh + var(--header-mobile-height));
+
+    article {
+      padding: 0 0.5rem;
+
+      > div {
+        justify-content: center;
+
+        menu.buttons {
+          justify-content: center;
+        }
+
+        > img {
+          display: none;
+        }
+      }
+    }
+
+    > img {
+      display: none;
+    }
   }
 }

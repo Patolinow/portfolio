@@ -20,25 +20,25 @@ const HeroSection = () => {
   return (
     <section id="home">
       <article>
-        <img src={arrowImage} alt="Seta apontando para botão 'contratar'" />
-
         <div>
-          <h1>FRONTEND</h1>
-          <h1 className="accent-text">DEVELOPER</h1>
-
-          <menu className="buttons">
-            <a href="#contact"><Button>Contratar</Button></a>
-
-            <a href={currriculumPdf} download={currriculumPdf}>
-              <Button className="secondary">
-                <p>Baixar CV</p> <img src={downloadIcon} />
-              </Button>
-            </a>
-          </menu>
+          <img src={arrowImage} alt="Seta apontando para botão 'contratar'" />
+          <div>
+            <h1>FRONTEND</h1>
+            <h1 className="accent-text">DEVELOPER</h1>
+            <menu className="buttons">
+              <a href="#contact"><Button>Contratar</Button></a>
+              <a href={currriculumPdf} download={currriculumPdf}>
+                <Button className="secondary">
+                  <p>Baixar CV</p> <img src={downloadIcon} />
+                </Button>
+              </a>
+            </menu>
+          </div>
         </div>
 
-        <img src={heroImage} alt="Homem sentado no chão usando um notebook apoiado em seu joelho" />
+        
       </article>
+      <img src={heroImage} alt="Homem sentado no chão usando um notebook apoiado em seu joelho" />
 
       <Player
         id="down-arrow"
