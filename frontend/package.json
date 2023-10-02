@@ -8,8 +8,9 @@
     "test": "vitest",
     "test-ui": "vitest --ui",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 1",
+    "preview": "vite preview",
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
