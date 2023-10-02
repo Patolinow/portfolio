@@ -11,7 +11,7 @@ const AboutMe = () => {
           Sobre <span className="accent-text">mim</span>
         </h2>
         <p>
-        Olá! Meu nome é Fábio, tenho 20 anos e sou um estudante de Engenharia de Software na UNOPAR, já fiz curso técnico integrado ao ensino médio pelo IFBaiano Campus Governador Mangabeira. Eu atualmente desenvolvo soluções em React utilizando frameworks como NextJS e linguagens somo Typescript e Javascript e diversas outras bibliotecas que constam nas minhas skills. 
+        Olá! Meu nome é Fábio, tenho 20 anos e sou um estudante de Engenharia de Software na UNOPAR, já fiz curso técnico integrado ao ensino médio pelo IFBaiano Campus Governador Mangabeira. Eu atualmente desenvolvo soluções em React utilizando frameworks como NextJS e linguagens como Typescript e Javascript, assim como diversas outras bibliotecas que constam nas minhas skills. 
         </p>
         
       </article>
