@@ -3,7 +3,7 @@ import heroImage from "../../assets/images/drawn1.png";
 import arrowImage from "../../assets/images/arrow1.svg";
 import downArrow from "../../assets/images/downArrow.json";
 import downloadIcon from "../../assets/icons/download.svg";
-import currriculumPdf from "../../assets/pdfs/fabio-neves-frontend.pdf";
+import currriculumPdf from "../../assets/pdfs/fabio-neves-front-end.pdf";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { AnimationItem } from "lottie-web";
 import Button from "../Ui/Button";
